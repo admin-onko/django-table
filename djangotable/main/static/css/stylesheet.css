@@ -1,0 +1,49 @@
+.container-content {
+  margin: 0;
+  margin: 2em;
+}
+.table-header {
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+.table {
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+
+}
+
+/* #d8d8d8 серый свет границ */
+
+.table thead th {
+  font-weight: bold;
+  text-align: center;
+  border: 0.2em solid white;
+  padding: 10px 15px;
+  font-size: 0.8em;
+  background: #2e66a7;
+  color: white;
+}
+.table thead tr th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.table thead tr th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.table tbody td {
+  text-align: center;
+  border: 0.2em solid #f3f3f3;
+  padding: 10px 15px;
+  font-size: 14px;
+  vertical-align: middle;
+
+}
+.table tbody tr:nth-child(even){
+  background: #f3f3f3;
+}
+.table tbody tr td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.table tbody tr td:last-child {
+  border-radius: 0 8px 8px 0;
+}

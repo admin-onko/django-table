@@ -1,0 +1,46 @@
+{% extends 'main/template.html'%}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content  %}
+	<h3 class="table-header">Список оборудования</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Наименование оборудования</th>
+  				<th>Дата принятия к учету</th>
+          <th>Инвентарный номер</th>
+          <th>Первоначальная стоимость</th>
+          <th>Стоимость для вычисления амортизации</th>
+          <th>Стоимость на начало периода</th>
+          <th>Амортизация на начало периода</th>
+          <th>Остаточная стоимость на начало периода</th>
+          <th>Стоимость на конец периода</th>
+          <th>Амортизация на конец периода</th>
+          <th>Остаточная стоимость</th>
+  			</tr>
+      </thead>
+      <tbody>
+        {% for element in books %}
+          <tr>
+    				<td>{{ element.title }}</td>
+    				<td>{{ element.adoption }}</td>
+    				<td>{{ element.number }}</td>
+    				<td>{{ element.initial_cost }}<p>тг.</p></td>
+    				<td>{{ element.calculate_depreciation }}<p>тг.</p></td>
+    				<td>{{ element.cost_begining_period }}<p>тг.</p></td>
+    				<td>{{ element.depreciation_begining_period }}<p>тг.</p></td>
+    				<td>{{ element.residual_value_begining }}<p>тг.</p></td>
+    				<td>{{ element.price_end_period }}<p>тг.</p></td>
+    				<td>{{ element.depreciation_end_period }}<p>тг.</p></td>
+    				<td>{{ element.residual_value}}<p>тг.</p></td>
+    			</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+{% endblock %}
